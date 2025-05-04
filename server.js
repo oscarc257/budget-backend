@@ -67,7 +67,7 @@ app.use("/api", categoriesRoutes); // Categories-related routes
 app.use("/api/exchange-rates", exchangeRatesRouter); // Exchange rates routes
 
 // Catch-all route to serve the React app for any unmatched routes
-app.get("/*splat", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "clientBuild", "index.html"));
 });
 
